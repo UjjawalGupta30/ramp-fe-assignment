@@ -106,7 +106,7 @@ export function InputSelect<TItem>({
             return <div className="RampInputSelect--dropdown-item">No items</div>
           }
 
-          return items.map((item, index) => {
+          return items.map((item: any, index: number) => {
             const parsedItem = parseItem(item)
             return (
               <div
@@ -132,7 +132,7 @@ export function InputSelect<TItem>({
   )
 }
 
-const getDropdownPosition: GetDropdownPositionFn = (target) => {
+const getDropdownPosition: GetDropdownPositionFn = (target: any) => {
   
   if (target instanceof Element) {
     const { top, left } = target.getBoundingClientRect()
